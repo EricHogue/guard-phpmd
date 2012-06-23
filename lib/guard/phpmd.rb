@@ -4,7 +4,7 @@ require 'guard/guard'
 module Guard
 	class PHPMD < Guard
 
-  		VERSION = '0.0.1'
+  		VERSION = '0.0.2'
 
 		DEFAULT_OPTIONS = {
 		  :path => '.',
@@ -17,7 +17,7 @@ module Guard
 	      super(watchers, @options)
 	    end
 
-	    def run_on_change(paths)
+	    def run_on_changes(paths)
 			@options[:rules] = File.expand_path @options[:rules]
 			paths.each do |path|
 				path = File.expand_path path
