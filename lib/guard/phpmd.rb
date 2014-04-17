@@ -17,7 +17,7 @@ module Guard
 	      super(watchers, @options)
 	    end
 
-	    def run_on_changes(paths)
+	    def run_on_modifications(paths)
 			@options[:rules] = File.expand_path @options[:rules]
 			paths.each do |path|
 				path = File.expand_path path
