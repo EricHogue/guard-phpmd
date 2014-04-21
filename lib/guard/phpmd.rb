@@ -4,7 +4,7 @@ require 'guard/guard'
 module Guard
 	class PHPMD < Guard
 
-  		VERSION = '0.0.2'
+  		VERSION = '0.0.3'
 
 		DEFAULT_OPTIONS = {
 		  :path => '.',
