@@ -4,11 +4,12 @@ require 'guard/guard'
 module Guard
 	class PHPMD < Guard
 
-  		VERSION = '0.0.3'
+  		VERSION = '0.0.4'
 
 		DEFAULT_OPTIONS = {
-		  :path => '.',
-	      :rules => 'pmd-rules.xml'
+            :path => '.',
+            :rules => 'pmd-rules.xml',
+            :executable => 'phpmd',
 	    }
 
 	    def initialize(watchers = [], options = {})
@@ -22,7 +23,7 @@ module Guard
 			paths.each do |path|
 				path = File.expand_path path
 				Dir.chdir(@options[:path]) do
-					results = `phpmd #{path} text #{@options[:rules]}`
+					results = `#{@options[:executable]} #{path} text #{@options[:rules]}`
 					if $?.to_i > 0 then
 						::Guard::Notifier.notify(results, :title => 'PHP Mess Detector', :image => :failed)
 						puts results
