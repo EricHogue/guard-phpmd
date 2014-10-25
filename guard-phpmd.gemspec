@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Guard::PHPMD::VERSION
   s.authors     = ["Patrik Henningsson"]
   s.email       = ["patrik.henningsson@gmail.com"]
-  s.homepage    = "http://github.com/pahen/guard-phpmd"
+  s.homepage    = "http://github.com/EricHogue/guard-phpmd"
   s.summary     = "Guard gem for running PHPMD"
   s.description = "Guard::PHPMD automatically runs PHP Mess Detector when watched files are modified."
 
