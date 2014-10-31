@@ -28,7 +28,7 @@ Set the working directory (useful when using relative paths used in the rules fi
 
 Path to the rules file.
 
-* `:excutable   # default => "phpmd"`
+* `:executable   # default => "phpmd"`
 
 Specify the path to the phpmd executable. Useful when installing phpmd with Composer.
 
