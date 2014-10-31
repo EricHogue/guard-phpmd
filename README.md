@@ -34,6 +34,6 @@ Specify the path to the phpmd executable. Useful when installing phpmd with Comp
 
 ### Example
 
-	guard 'phpmd', :path => 'path/to/PHPMD', :rules => 'path/to/pmd-rules.xml' do
+	guard 'phpmd', :executable => 'path/to/PHPMD', :rules => 'path/to/pmd-rules.xml' do
 		watch(%r{.*\.php$})
 	end
