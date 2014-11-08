@@ -2,7 +2,7 @@ require 'guard'
 require 'guard/guard'
 
 module Guard
-	class PHPMD < Guard
+	class PHPMD < ::Guard::Plugin
 
   		VERSION = '0.0.4'
 
@@ -12,10 +12,10 @@ module Guard
             :executable => 'phpmd',
 	    }
 
-	    def initialize(watchers = [], options = {})
+	    def initialize(options = {})
 	      defaults = DEFAULT_OPTIONS.clone
 	      @options = defaults.merge(options)
-	      super(watchers, @options)
+	      super(@options)
 	    end
 
 	    def run_on_modifications(paths)
