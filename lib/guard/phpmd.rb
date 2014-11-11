@@ -1,10 +1,9 @@
 require 'guard'
-require 'guard/guard'
 
 module Guard
 	class PHPMD < ::Guard::Plugin
 
-  		VERSION = '0.0.4'
+  		VERSION = '0.0.5'
 
 		DEFAULT_OPTIONS = {
             :path => '.',
